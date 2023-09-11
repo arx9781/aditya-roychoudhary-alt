@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap");
 @font-face {
-  font-family: Styrene A Reg;
-  src: url(/fonts/StyreneAWeb-Regular.ttf);
+  font-family: Akira-Expanded;
+  src: url(/fonts/Akira-Expanded.ttf);
 }
 @font-face {
-  font-family: Styrene A Bol;
-  src: url(/fonts/StyreneAWeb-Bold.ttf);
+  font-family: Schabo-Condensed;
+  src: url(/fonts/SCHABO-Condensed.woff2);
 }
 *,
 ::before,
@@ -12,7 +13,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Styrene A Reg;
+  font-family: "Roboto Condensed", sans-serif;
   color: white;
 }
 
@@ -35,15 +36,12 @@ body ::selection {
   color: #000;
 }
 body #blob {
-  width: 20em;
-  height: 20em;
-  background: linear-gradient(#6e8ba9 95%, gray 40%);
-  border-radius: 50%;
+  width: 100%;
+  height: 150%;
+  background: linear-gradient(rgba(133, 133, 133, 0.231372549), rgba(0, 0, 0, 0.5882352941));
   position: absolute;
   pointer-events: none;
   filter: blur(13em);
-  left: -5em;
-  top: -5em;
   z-index: -1;
 }
 @keyframes blob-anim {
@@ -79,10 +77,11 @@ body #blob {
   width: 100%;
 }
 #main-container .header .profile-info-container .profile-info-left {
-  width: 50%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: start;
 }
 #main-container .header .profile-info-container .profile-info-left .prof-img {
   width: 50px;
@@ -95,10 +94,11 @@ body #blob {
 #main-container .header .profile-info-container .profile-info-left .prof-text {
   color: white;
   margin-left: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
+  font-weight: 700;
 }
 #main-container .header .profile-info-container .profile-info-right {
-  width: 50%;
+  width: 30%;
 }
 #main-container .header .navbar {
   width: 100%;
@@ -117,7 +117,7 @@ body #blob {
   outline: none;
   background: none;
   border: none;
-  font-size: 1.1rem;
+  font-size: 2rem;
   cursor: pointer;
   transition: transform ease 0.3s;
   font-weight: bold;
@@ -179,23 +179,36 @@ body #blob {
   border-bottom: none;
   border-left: none;
 }
+#main-container .main .inner-main-2 .overlayShn {
+  position: absolute;
+  left: -5rem;
+  top: 0rem;
+  filter: saturate(0);
+  pointer-events: none;
+}
 #main-container .main .inner-main-2 .i-m-2-intro {
   padding: 0.5rem 0 1rem 0;
   text-align: justify;
   line-height: 25px;
   color: rgba(255, 255, 255, 0.723);
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
 }
 #main-container .main .inner-main-2 .i-m-2-mid-1 {
   padding: 0.5rem 0 1rem 0;
   text-align: justify;
   line-height: 25px;
   color: rgba(255, 255, 255, 0.723);
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
 }
 #main-container .main .inner-main-2 .i-m-2-end {
   padding: 0.5rem 0 1rem 0;
   text-align: justify;
   color: rgba(255, 255, 255, 0.723);
   line-height: 25px;
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
 }
 #main-container .main .inner-main-3 {
   width: 100%;
@@ -203,7 +216,7 @@ body #blob {
 }
 #main-container .main .inner-main-3 .im3-line {
   position: absolute;
-  top: 62em;
+  top: 38em;
   left: 17em;
   z-index: -1;
   width: 100%;
@@ -374,6 +387,42 @@ body #blob {
   border: 2px solid #6e8ba9;
 }
 
+@media only screen and (max-width: 960px) {
+  a {
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (max-width: 860px) {
+  a {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  a {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 660px) {
+  a {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1em;
+    width: 80vw;
+    align-items: baseline;
+  }
+  a {
+    font-size: 1rem;
+  }
+  .main {
+    width: 100vw;
+    top: 25em;
+    margin: 0 auto;
+  }
+}
 @media only screen and (max-width: 450px) {
   #blob {
     width: 5em;
@@ -390,6 +439,7 @@ body #blob {
   }
   #main-container .header .profile-info-container {
     flex-direction: column;
+    align-items: start;
   }
   #main-container .header .navbar {
     flex-direction: column;
@@ -402,7 +452,7 @@ body #blob {
   }
   #main-container .main {
     width: 100vw;
-    top: 22em;
+    top: 25em;
     margin: 0 auto;
   }
   #main-container .main .inner-main-1 {
@@ -414,9 +464,12 @@ body #blob {
   #main-container .main .inner-main-2 {
     line-height: normal;
   }
+  #main-container .main .inner-main-2 .overlayShn {
+    left: 0;
+  }
   #main-container .main .inner-main-3 .im3-line {
     position: absolute;
-    top: 107em;
+    top: 55em;
     left: 0em;
     z-index: -1;
     width: 100%;

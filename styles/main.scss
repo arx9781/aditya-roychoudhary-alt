@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap');
+
 $black-black: #000;
 $black-primary: #161616;
 $text-def: rgba(255, 255, 255, 0.921);
@@ -12,22 +14,22 @@ $accent-bronze: #c9ae5d;
 }
 
 @font-face {
-  font-family: Styrene A Reg;
-  src: url(/fonts/StyreneAWeb-Regular.ttf);
+  font-family: Akira-Expanded;
+  src: url(/fonts/Akira-Expanded.ttf);
 }
 
 @font-face {
-  font-family: Styrene A Bol;
-  src: url(/fonts/StyreneAWeb-Bold.ttf);
+  font-family: Schabo-Condensed;
+  src: url(/fonts/SCHABO-Condensed.woff2);
 }
 
-@mixin font-main() {
-  font-family: Styrene A Reg;
-}
+// @mixin font-main() {
+//   font-family: Akira-Expanded;
+// }
 
-@mixin font-bold() {
-  font-family: Styrene A Bol;
-}
+// @mixin font-bold() {
+//   font-family: Schabo-Condensed;
+// }
 
 *,
 ::before,
@@ -35,7 +37,7 @@ $accent-bronze: #c9ae5d;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Styrene A Reg;
+  font-family: "Roboto Condensed", sans-serif;
   color: white;
 }
 
@@ -55,17 +57,18 @@ body {
   }
 
   #blob {
-    width: 20em;
-    height: 20em;
-    background: linear-gradient($accent-oceangray 95%, gray 40%);
-    border-radius: 50%;
+    width: 100%;
+    height: 150%;
+    background: linear-gradient(#8585853b, #00000096);
+    // border-radius: 50%;
     position: absolute;
     pointer-events: none;
     filter: blur(13em);
-    left: -5em;
-    top: -5em;
+    // left: -5em;
+    // top: -5em;
     // animation: blob-anim 5s infinite ease;
     z-index: -1;
+    // opacity: 10%;
 
     @keyframes blob-anim {
       from {
@@ -98,8 +101,9 @@ body {
       width: 100%;
 
       .profile-info-left {
-        width: 50%;
+        width: 70%;
         @include default-flex();
+        justify-content: start;
 
         .prof-img {
           width: 50px;
@@ -114,12 +118,13 @@ body {
         .prof-text {
           color: white;
           margin-left: 1rem;
-          font-size: 1.2rem;
+          font-size: 1.7rem;
+          font-weight: 700;
         }
       }
 
       .profile-info-right {
-        width: 50%;
+        width: 30%;
       }
     }
 
@@ -138,7 +143,7 @@ body {
         outline: none;
         background: none;
         border: none;
-        font-size: 1.1rem;
+        font-size: 2rem;
         cursor: pointer;
         transition: transform ease 0.3s;
         font-weight: bold;
@@ -209,11 +214,21 @@ body {
       border-bottom: none;
       border-left: none;
 
+      .overlayShn {
+        position: absolute;
+        left: -5rem;
+        top: 0rem;
+        filter: saturate(0);
+        pointer-events: none;
+      }
+
       .i-m-2-intro {
         padding: 0.5rem 0 1rem 0;
         text-align: justify;
         line-height: 25px;
         color: rgba(255, 255, 255, 0.723);
+        font-size: 1.1rem;
+        font-family: 'Roboto', sans-serif;
       }
 
       .i-m-2-mid-1 {
@@ -221,6 +236,8 @@ body {
         text-align: justify;
         line-height: 25px;
         color: rgba(255, 255, 255, 0.723);
+        font-size: 1.1rem;
+        font-family: 'Roboto', sans-serif;
       }
 
       .i-m-2-end {
@@ -228,6 +245,8 @@ body {
         text-align: justify;
         color: rgba(255, 255, 255, 0.723);
         line-height: 25px;
+        font-size: 1.1rem;
+        font-family: 'Roboto', sans-serif;
       }
     }
 
@@ -237,7 +256,7 @@ body {
 
       .im3-line {
         position: absolute;
-        top: 62em;
+        top: 38em;
         left: 17em;
         z-index: -1;
         width: 100%;
@@ -411,6 +430,49 @@ body {
   }
 }
 
+@media only screen and (max-width: 960px) {
+  a {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  a {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  a {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  a {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1em;
+    width: 80vw;
+    align-items: baseline;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  .main {
+    width: 100vw;
+    top: 25em;
+    margin: 0 auto;
+  }
+}
+
 @media only screen and (max-width: 450px) {
   #blob {
     width: 5em;
@@ -428,6 +490,7 @@ body {
 
       .profile-info-container {
         flex-direction: column;
+        align-items: start;
       }
 
       .navbar {
@@ -444,7 +507,7 @@ body {
 
     .main {
       width: 100vw;
-      top: 22em;
+      top: 25em;
       margin: 0 auto;
 
       .inner-main-1 {
@@ -454,12 +517,16 @@ body {
 
       .inner-main-2 {
         line-height: normal;
+
+        .overlayShn {
+          left: 0;
+        }
       }
 
       .inner-main-3 {
         .im3-line {
           position: absolute;
-          top: 107em;
+          top: 55em;
           left: 0em;
           z-index: -1;
           width: 100%;
