@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:wght@400;700&display=swap");
 
 $black-black: #000;
 $black-primary: #161616;
@@ -12,24 +12,6 @@ $accent-bronze: #c9ae5d;
   align-items: center;
   justify-content: center;
 }
-
-@font-face {
-  font-family: Akira-Expanded;
-  src: url(/fonts/Akira-Expanded.ttf);
-}
-
-@font-face {
-  font-family: Schabo-Condensed;
-  src: url(/fonts/SCHABO-Condensed.woff2);
-}
-
-// @mixin font-main() {
-//   font-family: Akira-Expanded;
-// }
-
-// @mixin font-bold() {
-//   font-family: Schabo-Condensed;
-// }
 
 *,
 ::before,
@@ -45,11 +27,19 @@ $accent-bronze: #c9ae5d;
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+svg {
+  overflow: hidden;
+}
+
 body {
   width: 100vw;
   height: 100vh;
   background: rgb(10, 10, 10);
-  overflow-x: hidden;
+  overflow: hidden;
 
   ::selection {
     background-color: $accent-oceangray;
@@ -59,24 +49,29 @@ body {
   #blob {
     width: 100%;
     height: 150%;
-    background: linear-gradient(#8585853b, #00000096);
-    // border-radius: 50%;
+    background: linear-gradient(rgba(0, 0, 0, 0.231), rgba(0, 0, 0, 0.856));
     position: absolute;
     pointer-events: none;
-    filter: blur(13em);
-    // left: -5em;
-    // top: -5em;
-    // animation: blob-anim 5s infinite ease;
+    filter: blur(1em);
     z-index: -1;
-    // opacity: 10%;
+    border-radius: 50%;
+    top: -25em;
+    box-shadow: 0px 0px 9rem rgb(255, 255, 255);
+    animation: blob-anim 15s infinite ease;
 
     @keyframes blob-anim {
-      from {
-        transform: rotate(0deg);
+      50% {
+        box-shadow: 0px 0px 9rem #6e8ba9c6;
       }
-      to {
-        transform: rotate(360deg);
+      100% {
+        box-shadow: 0px 0px 9rem rgb(255, 255, 255);
       }
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    #blob {
+      display: none;
     }
   }
 }
@@ -94,6 +89,10 @@ body {
     position: absolute;
     width: 70vw;
 
+    .svg-container-nav {
+      display: none;
+    }
+
     .profile-info-container {
       @include default-flex();
       justify-content: space-between;
@@ -101,7 +100,7 @@ body {
       width: 100%;
 
       .profile-info-left {
-        width: 70%;
+        width: 100%;
         @include default-flex();
         justify-content: start;
 
@@ -111,7 +110,7 @@ body {
           transition: 0.3s ease;
 
           &:hover {
-            box-shadow: -5px 5px 0px $accent-bronze;
+            box-shadow: 0px 0px 10px $text-def, 0px 0px 15px $accent-oceangray;
           }
         }
 
@@ -124,7 +123,7 @@ body {
       }
 
       .profile-info-right {
-        width: 30%;
+        width: 0%;
       }
     }
 
@@ -134,7 +133,6 @@ body {
       justify-content: space-evenly;
       margin: 1em;
       padding: 2em;
-      // background: rgb(255 255 255 / 14%);
       backdrop-filter: blur(24px);
       border: 2px solid rgba(255 255 255 / 14%);
       border-radius: 10px;
@@ -143,7 +141,7 @@ body {
         outline: none;
         background: none;
         border: none;
-        font-size: 2rem;
+        font-size: 1.5rem;
         cursor: pointer;
         transition: transform ease 0.3s;
         font-weight: bold;
@@ -181,378 +179,34 @@ body {
       }
     }
   }
-
-  .main {
-    width: 70vw;
-    position: absolute;
-    top: 20em;
-    padding: 1rem;
-    @include default-flex();
-    justify-content: space-evenly;
-    flex-direction: column;
-    margin: 0 0 4em 0;
-
-    .inner-main-1 {
-      width: 100%;
-      margin: 2rem 0;
-      margin-left: 40px;
-
-      .i-m-1-text {
-        font-size: 1.8rem;
-        text-decoration: underline;
-        text-underline-offset: 6px;
-        color: $text-def;
-      }
-    }
-
-    .inner-main-2 {
-      width: 100%;
-      font-size: 0.8rem;
-      border: 1px solid $lighter-white;
-      padding: 1rem;
-      border-radius: 15px;
-      border-bottom: none;
-      border-left: none;
-
-      .overlayShn {
-        position: absolute;
-        left: -5rem;
-        top: 0rem;
-        filter: saturate(0);
-        pointer-events: none;
-      }
-
-      .i-m-2-intro {
-        padding: 0.5rem 0 1rem 0;
-        text-align: justify;
-        line-height: 25px;
-        color: rgba(255, 255, 255, 0.723);
-        font-size: 1.1rem;
-        font-family: 'Roboto', sans-serif;
-      }
-
-      .i-m-2-mid-1 {
-        padding: 0.5rem 0 1rem 0;
-        text-align: justify;
-        line-height: 25px;
-        color: rgba(255, 255, 255, 0.723);
-        font-size: 1.1rem;
-        font-family: 'Roboto', sans-serif;
-      }
-
-      .i-m-2-end {
-        padding: 0.5rem 0 1rem 0;
-        text-align: justify;
-        color: rgba(255, 255, 255, 0.723);
-        line-height: 25px;
-        font-size: 1.1rem;
-        font-family: 'Roboto', sans-serif;
-      }
-    }
-
-    .inner-main-3 {
-      width: 100%;
-      margin-top: 5em;
-
-      .im3-line {
-        position: absolute;
-        top: 38em;
-        left: 17em;
-        z-index: -1;
-        width: 100%;
-
-        .svg-container {
-          width: 100%;
-          overflow: hidden;
-
-          .maelstromCirc {
-            width: 80em;
-            filter: invert(1);
-            // animation: circ-anim 40s infinite ease;
-
-            @keyframes circ-anim {
-              from {
-                transform: rotate(0deg);
-              }
-              to {
-                transform: rotate(360deg);
-              }
-            }
-          }
-        }
-      }
-
-      .i-m-3-head {
-        width: 100%;
-
-        .i-m-3-head-text {
-          font-size: 1.7rem;
-          color: $text-def;
-          text-decoration: underline;
-          text-underline-offset: 6px;
-        }
-      }
-    }
-
-    .i-m-3-list {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      flex-direction: column;
-      margin-top: 2em;
-
-      .im3-1 {
-        width: 100%;
-        @include default-flex();
-        padding: 1.5em;
-        margin: 1em;
-        font-size: 2rem;
-        transition: 0.2s ease;
-        cursor: pointer;
-        border: 2px solid rgba(255, 255, 255, 0.465);
-        border-radius: 15px;
-        font-weight: bold;
-        backdrop-filter: blur(15px);
-
-        &:hover {
-          border: 2px solid $accent-oceangray;
-        }
-      }
-
-      .im3-2 {
-        width: 100%;
-        @include default-flex();
-        padding: 1.5em;
-        margin: 1em;
-        font-size: 2rem;
-        transition: 0.3s ease-in-out;
-        cursor: pointer;
-        border: 2px solid rgba(255, 255, 255, 0.465);
-        border-radius: 15px;
-        font-weight: bold;
-        backdrop-filter: blur(15px);
-
-        &:hover {
-          border: 2px solid $accent-oceangray;
-        }
-      }
-
-      .im3-3 {
-        width: 100%;
-        @include default-flex();
-        padding: 1.5em;
-        margin: 1em;
-        font-size: 2rem;
-        transition: 0.3s ease-in-out;
-        cursor: pointer;
-        border: 2px solid rgba(255, 255, 255, 0.465);
-        border-radius: 15px;
-        font-weight: bold;
-        backdrop-filter: blur(15px);
-
-        &:hover {
-          border: 2px solid $accent-oceangray;
-        }
-      }
-
-      .im3-4 {
-        width: 100%;
-        @include default-flex();
-        padding: 1.5em;
-        margin: 1em;
-        font-size: 2rem;
-        transition: 0.3s ease-in-out;
-        cursor: pointer;
-        border: 2px solid rgba(255, 255, 255, 0.465);
-        border-radius: 15px;
-        font-weight: bold;
-        backdrop-filter: blur(15px);
-
-        &:hover {
-          border: 2px solid $accent-oceangray;
-        }
-      }
-
-      .im3-5 {
-        width: 100%;
-        @include default-flex();
-        padding: 1.5em;
-        margin: 1em;
-        font-size: 2rem;
-        transition: 0.3s ease-in-out;
-        cursor: pointer;
-        border: 2px solid rgba(255, 255, 255, 0.465);
-        border-radius: 15px;
-        font-weight: bold;
-        backdrop-filter: blur(15px);
-
-        &:hover {
-          border: 2px solid $accent-oceangray;
-        }
-      }
-
-      .im3-6 {
-        width: 100%;
-        @include default-flex();
-        padding: 1.5em;
-        margin: 1em;
-        font-size: 2rem;
-        transition: 0.3s ease-in-out;
-        cursor: pointer;
-        border: 2px solid rgba(255, 255, 255, 0.465);
-        border-radius: 15px;
-        font-weight: bold;
-        backdrop-filter: blur(15px);
-
-        &:hover {
-          border: 2px solid $accent-oceangray;
-        }
-      }
-
-      .im3-7 {
-        width: 100%;
-        @include default-flex();
-        padding: 1.5em;
-        margin: 1em;
-        font-size: 2rem;
-        transition: 0.3s ease-in-out;
-        cursor: pointer;
-        border: 2px solid rgba(255, 255, 255, 0.465);
-        border-radius: 15px;
-        font-weight: bold;
-        backdrop-filter: blur(15px);
-
-        &:hover {
-          border: 2px solid $accent-oceangray;
-        }
-      }
-    }
-  }
 }
-
-@media only screen and (max-width: 960px) {
-  a {
-    font-size: 1.7rem;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  a {
-    font-size: 1.5rem;
-  }
-}
-
-@media only screen and (max-width: 760px) {
-  a {
-    font-size: 1.3rem;
-  }
-}
-
-@media only screen and (max-width: 660px) {
-  a {
-    font-size: 1.1rem;
-  }
-}
-
-@media only screen and (max-width: 560px) {
-  .navbar {
-    flex-direction: column;
-    padding: 1em;
-    width: 80vw;
-    align-items: baseline;
-  }
-
-  a {
-    font-size: 1rem;
-  }
-
-  .main {
-    width: 100vw;
-    top: 25em;
-    margin: 0 auto;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  #blob {
-    width: 5em;
-    height: 5em;
-  }
-
+@media only screen and (max-width: 950px) {
   #main-container {
-    width: 100vw;
-    margin: 0;
-    overflow: hidden;
+    width: 90vw;
 
     .header {
-      top: 2rem;
-      width: 100vw;
+      width: 90vw;
+      
+      .svg-container-nav {
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        width: 100vw;
 
-      .profile-info-container {
-        flex-direction: column;
-        align-items: start;
+        .svg-floating {
+          transform: rotate(200deg);
+          filter: blur(5px);
+        }
       }
 
       .navbar {
         flex-direction: column;
-        padding: 1em;
-        width: 80vw;
-        align-items: baseline;
+        align-items: start;
+        padding: 1.5rem;
 
         .btn {
           margin: 0.5rem 0;
-        }
-      }
-    }
-
-    .main {
-      width: 100vw;
-      top: 25em;
-      margin: 0 auto;
-
-      .inner-main-1 {
-        @include default-flex();
-        margin-left: 0;
-      }
-
-      .inner-main-2 {
-        line-height: normal;
-
-        .overlayShn {
-          left: 0;
-        }
-      }
-
-      .inner-main-3 {
-        .im3-line {
-          position: absolute;
-          top: 55em;
-          left: 0em;
-          z-index: -1;
-          width: 100%;
-
-          .svg-container {
-            width: 100%;
-            overflow: hidden;
-
-            .maelstromCirc {
-              width: 70em;
-              animation: circ-anim 60s infinite ease;
-
-              @keyframes circ-anim {
-                from {
-                  transform: rotate(0deg);
-                }
-                to {
-                  transform: rotate(360deg);
-                }
-              }
-            }
-          }
-        }
-
-        .i-m-3-head {
-          @include default-flex();
+          font-size: 1.2rem;
         }
       }
     }

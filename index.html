@@ -4,27 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{ghostcmd}</title>
+    <title>Aditya Roychoudhary | About</title>
     <link rel="stylesheet" href="/styles/main.css">
     <script src="/javascript/main.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
     <div id="blob"></div>
     <div id="main-container">
         <section class="header">
-            <div class="profile-info-container">
+            <div class="svg-container-nav">
+                <img src="/svg/Animated Shape (1).svg" alt="animated-shape-svg" class="svg-floating" style="overflow: hidden;">
+            </div>
+            <div class="profile-info-container" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500" data-aos-mirror="false">
                 <div class="profile-info-left">
                     <img src="/images/tv-head.jpg" class="prof-img" width="100px">
                     <h1 class="prof-text">ADITYA ROYCHOUDHARY</h1>
                 </div>
-                <!-- <div class="profile-info-right">
-                    <button class="toggle" onclick="toggleButton()">Light Mode</button>
-                </div> -->
             </div>
-            <nav class="navbar">
-                <button class="btn" type="button" id="hovering">
+            <nav class="navbar" data-aos="fade-left" data-aos-duration="1500" data-aos-mirror="false">
+                <button class="btn" type="button" id="hovering" style="scroll-behavior: smooth;">
                     <a href="#">ABOUT</a>
                 </button>
                 <button class="btn" type="button">
@@ -37,64 +38,15 @@
                     <a href="#">CONTACT</a>
                 </button>
             </nav>
-        </section>
-        <section class="main">
-            <div class="inner-main-1">
-                <h1 class="i-m-1-text">About Me</h1>
-            </div>
-            <div class="inner-main-2">
-                <img src="/svg/Animated Shape.svg" class="overlayShn">
-                <p class="i-m-2-intro">
-                    Hello, I'm Aditya Roychoudhary, a dedicated software engineering student with an unwavering passion
-                    for technology, especially computers. It became apparent to me that a career in software engineering
-                    was the ideal path to channel this enthusiasm.
-                </p>
-                <p class="i-m-2-mid-1">
-                    As of 2023, my journey has equipped me with a diverse skill set, including proficiency in various
-                    programming languages such as Java and C/C++. However, my primary focus lies in the realm of
-                    front-end programming, where I specialize in creating engaging and user-friendly experiences. I'm
-                    well-versed in languages like HTML, SCSS, and JavaScript, along with its associated libraries.
-                </p>
-                <p class="i-m-2-end">
-                    I believe that technology has the power to transform ideas into reality, and I'm excited to continue
-                    exploring and contributing to the ever-evolving world of software engineering.
-                </p>
-            </div>
-            <div class="inner-main-3">
-                <div class="im3-line">
-                    <div class="svg-container">
-                        <img src="./svg/maelstromCirc.svg" class="maelstromCirc">
-                    </div>
-                </div>
-                <div class="i-m-3-head">
-                    <h1 class="i-m-3-head-text">Languages</h1>
-                </div>
-                <div class="i-m-3-list">
-                    <div class="im3-1">
-                        HTML
-                    </div>
-                    <div class="im3-2">
-                        CSS
-                    </div>
-                    <div class="im3-3">
-                        JavaScript
-                    </div>
-                    <div class="im3-4">
-                        C/C++
-                    </div>
-                    <div class="im3-5">
-                        Php/MySQL
-                    </div>
-                    <div class="im3-6">
-                        Java
-                    </div>
-                    <div class="im3-7">
-                        Python
-                    </div>
-                </div>
-            </div>
+            <nav class="section-navigation">
+
+            </nav>
         </section>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
