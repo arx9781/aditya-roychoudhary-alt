@@ -6,7 +6,7 @@ function updateProgressBar() {
   const progressBar = document.querySelector(".progress-bar");
   progressBar.style.setProperty("--progress", scrollPercent);
   progressBar.style.setProperty("width", scrollPercent + "%", {
-    transition: "width 2s ease",
+    transition: "width 2s ease-in-out",
   });
 }
 

@@ -9,12 +9,15 @@
     <script src="/javascript/main.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div id="btt"></div>
     <div id="progress-back" data-aos="fade-left" data-aos-duration="1500">
-        <div class="progress-bar"></div>
+        <div class="progress-bar" data-aos="fade-left" data-aos-duration="1500"></div>
     </div>
     <div id="blob" data-aos="zoom-out-up" data-aos-duration="1500"></div>
     <div id="main-container">
@@ -30,34 +33,132 @@
                     <a href="#about">ABOUT</a>
                 </button>
                 <button class="btn" type="button">
-                    <a href="#">PROJECTS</a>
+                    <a href="#projects">PROJECTS</a>
                 </button>
                 <button class="btn" type="button">
-                    <a href="#">OTHER STUFF</a>
+                    <a href="#other-stuff">OTHER STUFF</a>
                 </button>
                 <button class="btn" type="button">
-                    <a href="#">CONTACT</a>
+                    <a href="#last-anchor">CONTACT</a>
                 </button>
             </nav>
         </section>
         <section class="main">
-            <section id="about">
+            <div id="about-blob" data-aos="zoom-in" data-aos-duration="1000"></div>
+            <div id="projects-blob" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="4000"></div>
+            <div id="other-blob" data-aos="zoom-in" data-aos-duration="1000"></div>
+            <div id="contacts-blob" data-aos="zoom-in" data-aos-duration="1000"></div>
+            <section id="about" class="scroll-to-section" data-aos="zoom-out" data-aos-duration="1500"
+                data-aos-mirror="false">
                 <h2 class="about-section-head">About Section</h2>
                 <ul>
-                    <li><a href="#projects">Next Section</a></li>
+                    <li><a href="#projects" data-aos="zoom-out-down" data-aos-duration="1500">Next Section</a></li>
+                    <li><a href="#btt" data-aos="zoom-out-down" data-aos-duration="1500">Back To Top</a></li>
+                </ul>
+                <p class="about-para">
+                    Hello there, I'm Aditya Roychoudhary, and I'm a student specializing in frontend web development.
+                    I've always been captivated by the creative side of technology, especially when it comes to crafting
+                    user-friendly and visually appealing websites.
+                </p>
+                <p class="about-para">
+                    As I continue to learn and grow in the field, my primary focus is on frontend technologies. I enjoy
+                    working with HTML and CSS to structure and style web pages, and I'm progressively diving deeper into
+                    JavaScript to add interactivity and functionality to my projects.
+                </p>
+                <p class="about-para">
+                    While I'm still in the process of mastering JavaScript, I find great joy in experimenting with its
+                    capabilities. Each line of code I write is a stepping stone toward creating more dynamic and
+                    user-friendly web experiences. <br>
+
+                    While my primary focus is on frontend development, I also appreciate the importance of collaboration
+                    in the software world.
+                </p>
+            </section>
+            <section id="projects" class="scroll-to-section" data-aos="zoom-out" data-aos-duration="1500"
+                data-aos-mirror="false">
+                <h2 class="projects-section-head">Project Repository Links</h2>
+                <ul>
+                    <li><a href="#other-stuff">Next Section</a></li>
+                    <li><a href="#btt">Back To Top</a></li>
+                </ul>
+                <div class="main-column">
+                    <div class="project-column-1">
+                        <h3 class="column-1-header">CSS Components</h3>
+                        <div class="column-ul">
+                            <li class="column-li"><a href="#" class="column-link">Dark/Light Toggle</a></li>
+                            <li class="column-li"><a href="#" class="column-link">Neumorphic Card</a></li>
+                            <li class="column-li"><a href="#" class="column-link">Responsive Navbar</a></li>
+                        </div>
+                    </div>
+                    <div class="project-column-2">
+                        <h3 class="column-2-header">Websites</h3>
+                        <div class="column-ul">
+                            <li class="column-li"><a href="#" class="column-link">A Photography Website</a></li>
+                            <li class="column-li"><a href="#" class="column-link">Medium Clone News Website</a></li>
+                            <li class="column-li"><a href="#" class="column-link">My First Hosted Website</a></li>
+                        </div>
+                    </div>
+                    <div class="project-column-3">
+                        <h3 class="column-3-header">HTML Template</h3>
+                        <div class="column-ul">
+                            <li class="column-li"><a href="#" class="column-link">Alphabetical Country List</a></li>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="other-stuff" data-aos="zoom-out" data-aos-duration="1500">
+                <h2 class="projects-section-head">Other Things</h2>
+                <ul>
+                    <li><a href="#last-anchor">Next Section</a></li>
                     <li><a href="#btt">Back To Top</a></li>
                 </ul>
                 <p class="about-para">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dignissimos, cum, eos odio temporibus aliquam porro ad quam veritatis nesciunt dicta dolorum. Aliquam provident quis placeat reiciendis ratione facere tempore!
+                    Anime is one of my favorite pastimes, offering a captivating escape into imaginative worlds and
+                    intriguing narratives. From action-packed adventures to thought-provoking stories, I appreciate the
+                    artistry and storytelling in this medium.
+                    You can check out my list I have made in MAL.
+                    <br>
+                    Here's a link to the MyAnimeList: <a href="https://myanimelist.net/animelist/grimmqiao" style="background-color: slategray;">MAL</a>
                 </p>
                 <p class="about-para">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laboriosam nam, labore veritatis deserunt pariatur ea debitis voluptates ipsam dolorum quis expedita odit reprehenderit aliquam illo. Explicabo vitae consequuntur, voluptatum, quae dignissimos deleniti reprehenderit quod nam ipsam voluptatem aliquid incidunt accusantium est id, sunt non fuga iusto nobis aliquam. Voluptas.
+                    Beyond anime, I have an insatiable curiosity about the world. Learning about different countries and
+                    their rich histories is a personal hobby. Whether it's exploring ancient civilizations or
+                    understanding contemporary geopolitics, I find the global tapestry endlessly fascinating.
                 </p>
                 <p class="about-para">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et suscipit aliquid at ullam pariatur? Minus quae sequi quidem mollitia doloremque!
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur cumque, molestias eveniet assumenda dolor asperiores inventore at quo sed amet soluta velit nam quidem mollitia, enim, deleniti esse? Nobis, cum.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe recusandae, eos repudiandae laborum similique hic fuga totam id porro consequatur quia consectetur sint sunt magni ea in reicie
+                    The only game I play right now is called Mobile Legends, its a MOBA (Massive Online Battle Arena) like League of Legends. I like it because you actually have to think and stategize and not just be greasy like the people who play pubg mobile or smth.
+                    You can add me using this ID: <mark style="background-color: slategray">897540662 (12552)</mark>
                 </p>
+            </section>
+            <section id="contact" data-aos="zoom-out" data-aos-duration="1500">
+                <h2 class="projects-section-head">Contact</h2>
+                <ul>
+                    <li><a href="#btt">Back To Top</a></li>
+                </ul>
+                <div class="contact-section">
+                    <div class="custom-contact">
+                        <form action="">
+                            <input type="email" name="email" id="" placeholder="example@email.com">
+                            <input type="submit" value="Submit" class="submit">
+                        </form>
+                    </div>
+                    <p class="divider">OR</p>
+                    <div class="social-buttons">
+                        <div class="contact-container-i">
+                            <a href="#" class="social-a">INSTAGRAM</a>
+                        </div>
+                        <div class="contact-container-g">
+                            <a href="#" class="social-a">GITHUB</a>
+                        </div>
+                        <div class="contact-container-y">
+                            <a href="#" class="social-a">YOUTUBE</a>
+                        </div>
+                        <div class="contact-container-d">
+                            <a href="#" class="social-a">DISCORD</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="last-anchor"></div>
             </section>
         </section>
     </div>
