@@ -67,7 +67,7 @@ body {
     box-shadow: 0px 0px 55px 0px rgba(255, 255, 255, 0.4);
   }
 
-  @media only screen and (max-width: 650px) {
+  @media only screen and (max-width: 950px) {
     #progress-back {
       top: 0;
       left: 0;
@@ -116,8 +116,22 @@ body {
 
   @media only screen and (max-width: 650px) {
     #blob {
-      height: 50%;
+      height: 100%;
       // top: 3rem;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    #blob {
+      background-color: red;
+      height: 50%;
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    #blob {
+      height: 100%;
     }
   }
 }
@@ -787,6 +801,268 @@ body {
       .social-a {
         text-decoration: none;
         color: slategray;
+      }
+    }
+  }
+  @media only screen and (max-width: 950px) {
+    .main {
+      width: 90vw;
+      top: 30rem;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    #about-blob {
+      width: 30rem;
+      height: 30rem;
+      left: 5rem;
+      top: 9rem;
+    }
+
+    #about {
+      top: 0rem;
+      position: relative;
+      align-items: center;
+
+      ul {
+        justify-content: center;
+        margin: 0;
+      }
+
+      .about-para {
+        font-size: 1.5rem;
+        border-bottom: 2px solid rgba(255 255 255 / 14%);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-family: "Roboto", sans-serif;
+      }
+    }
+
+    #projects {
+      align-items: center;
+      .projects-section-head {
+        text-align: center;
+      }
+      ul {
+        justify-content: center;
+      }
+      .main-column {
+        flex-direction: column;
+
+        .project-column-1,
+        .project-column-2,
+        .project-column-3 {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+
+        .project-column-1 .column-ul .column-li,
+        .project-column-2 .column-ul .column-li,
+        .project-column-3 .column-ul .column-li {
+          text-align: center;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    .main {
+      width: 90vw;
+      top: 30rem;
+      overflow: hidden;
+      padding: 0;
+
+      #about-blob {
+        width: 30rem;
+        height: 30rem;
+        left: 5rem;
+        top: 9rem;
+      }
+
+      #contacts-blob {
+        display: none;
+      }
+
+      #other-blob {
+        position: absolute;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        background: linear-gradient(
+          141deg,
+          rgba(255, 255, 255, 0.4196078431),
+          transparent
+        );
+        opacity: 85%;
+        left: 4rem;
+        top: -4rem;
+      }
+
+      #about-blob-1 {
+        position: absolute;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        background: linear-gradient(141deg, rgba(118, 118, 117), transparent);
+        opacity: 85%;
+        left: -20rem;
+        top: 38rem;
+      }
+
+      #about-blob-2 {
+        position: absolute;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        background: linear-gradient(141deg, #ffffff6b, transparent);
+        opacity: 85%;
+        left: -9rem;
+        top: 154rem;
+      }
+
+      #about-blob-3 {
+        position: absolute;
+        width: 32rem;
+        height: 32rem;
+        border-radius: 50%;
+        background: linear-gradient(141deg, rgb(118, 118, 117), transparent);
+        opacity: 85%;
+        left: 11rem;
+        top: 127rem;
+      }
+
+      #projects-blob {
+        position: absolute;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        background: linear-gradient(141deg, #ffffff6b, transparent);
+        opacity: 85%;
+        left: 12rem;
+        top: 80rem;
+      }
+
+      #projects-blob-1 {
+        position: absolute;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        background: linear-gradient(141deg, rgba(118, 118, 117), transparent);
+        opacity: 85%;
+        left: -13rem;
+        top: 102rem;
+      }
+
+      #projects-blob-2 {
+        position: absolute;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        background: linear-gradient(141deg, #ffffff6b, transparent);
+        opacity: 85%;
+        left: 6rem;
+        top: 210rem;
+      }
+
+      #projects-blob-3 {
+        position: absolute;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        background: linear-gradient(141deg, rgb(118, 118, 117), transparent);
+        opacity: 85%;
+        left: 2rem;
+        top: 192rem;
+      }
+
+      #about {
+        top: 0rem;
+        position: relative;
+        align-items: center;
+
+        ul {
+          justify-content: center;
+          margin: 0;
+        }
+
+        .about-para {
+          font-size: 1.3rem;
+          border-bottom: 2px solid rgba(255 255 255 / 14%);
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+        }
+      }
+
+      #projects {
+        align-items: center;
+        .projects-section-head {
+          text-align: center;
+        }
+        ul {
+          justify-content: center;
+        }
+        .main-column {
+          flex-direction: column;
+
+          .project-column-1,
+          .project-column-2,
+          .project-column-3 {
+            width: 100%;
+            margin-bottom: 1rem;
+          }
+
+          .project-column-1 .column-ul .column-li,
+          .project-column-2 .column-ul .column-li,
+          .project-column-3 .column-ul .column-li {
+            text-align: center;
+          }
+        }
+      }
+
+      #contact {
+        align-items: center;
+        ul {
+          justify-content: center;
+
+          li {
+            margin: 0 0 1rem 0;
+          }
+        }
+        .contact-section {
+          .custom-contact {
+            justify-content: center;
+            flex-direction: column;
+
+            form {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
+
+            input[type="email"] {
+              width: 130%;
+            }
+
+            .submit {
+              position: relative;
+              top: 0;
+              left: 0;
+              margin: 2rem 0 0 0;
+              padding: 0.8 1.8rem;
+            }
+          }
+        }
+
+        .social-buttons {
+          flex-direction: column;
+
+          .contact-container-i,
+          .contact-container-y,
+          .contact-container-g,
+          .contact-container-d {
+            width: 100%;
+          }
+        }
       }
     }
   }
