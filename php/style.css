@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  background-color: #191919;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input-box input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+  /* background-color: red; */
+  outline: none;
+  color: black;
+  font-weight: bolder;
+}
+
+#btn {
+  margin-top: 1rem;
+  padding: 1rem;
+  color: black;
+}
+
+.content {
+  margin-top: 2rem;
+}
+
+.item {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
