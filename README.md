@@ -2,4 +2,6 @@ This is my second website I made for my class presentation which also works as m
 
 This website is still in development for the mobile viewport, I didnt have the time to finish it as my presentation was in 2 days. Though it is completely fine for Monitor or Laptop viewport
 
+Update! Finished Making it responsive for mobile (almost), now planning to add a message board to my website
+
 It does contain a Javascript Library called AOS (Animate On Scroll), here is a link to that github repository: https://github.com/michalsnik/aos
